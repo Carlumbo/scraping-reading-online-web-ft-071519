@@ -7,3 +7,9 @@ doc = Nokogiri::HTML(html)
 
 puts doc
 
+require 'nokogiri'
+require 'open-uri'
+ 
+doc = Nokogiri::HTML(open("http://flatironschool.com/"))
+puts doc.css("headline-26OIBN").text
+
